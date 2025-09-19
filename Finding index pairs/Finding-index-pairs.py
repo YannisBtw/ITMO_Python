@@ -16,7 +16,8 @@ def summ(nums, target):
 
 
 try:
-    data_1 = list(map(int, input('Введите массив чисел через пробел: ').split()))
+    data_1 = list(
+        map(int, input('Введите массив чисел через пробел: ').split()))
     data_2 = int(input('Введите число для поиска: '))
     print(summ(data_1, data_2))
 
