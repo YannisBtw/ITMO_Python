@@ -47,7 +47,6 @@ def gen_bin_tree(
     return {str(root): [left_subtree, right_subtree]}
 
 
-# --- Демонстрация ---
 if __name__ == "__main__":
     tree = gen_bin_tree(height=4, root=8)
     print("Бинарное дерево при root=8, height=4):")
