@@ -57,7 +57,9 @@ class TestLoggerDecorator(unittest.TestCase):
         self.failing_function = failing_function
 
     def test_logging_success(self) -> None:
-        """При успешном выполнении должны быть INFO-логи о старте и завершении."""
+        """
+        При успешном выполнении должны быть INFO-логи о старте и завершении.
+        """
         result = self.test_function(3)
         self.assertEqual(result, 6)
 
