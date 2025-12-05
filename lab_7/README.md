@@ -430,7 +430,7 @@ class TestSolveQuadratic(unittest.TestCase):
 
 ---
 
-## 📌 6. Демонстрация работы программы и логи в файлах currency.log и quadratic.log
+## 📌 6. Логи в файлах currency.log и quadratic.log
 
 ![img_3.png](currency_logs.png)
 ![img_4.png](quadratic.png)
