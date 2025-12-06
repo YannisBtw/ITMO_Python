@@ -60,7 +60,6 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         """Обработка всех GET-запросов."""
         parsed_url = urlparse(self.path)
         path = parsed_url.path
-        query_params = parse_qs(parsed_url.query)
 
         if path == "/":
             self.handle_index()
