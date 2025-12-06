@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Об авторе — {{ myapp }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    >
+
+    <style>
+        body {
+          min-height: 100vh;
+          background: linear-gradient(160deg, #0d0b16 0%, #160b22 40%, #240b36 100%);
+          color: #eee;
+          font-family: 'Inter', sans-serif;
+        }
+
+        nav.navbar {
+          background: rgba(15, 5, 30, 0.85) !important;
+          backdrop-filter: blur(14px);
+          border-bottom: 1px solid rgba(180, 100, 255, 0.2);
+        }
+
+        .nav-link {
+          font-weight: 500;
+          color: #d5cafe !important;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+          color: #b173ff !important;
+          text-shadow: 0 0 5px rgba(177, 115, 255, 0.7);
+        }
+
+        .glass-card {
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 1.5rem;
+          border: 1px solid rgba(180, 100, 255, 0.25);
+          box-shadow:
+            0 0 20px rgba(150, 70, 255, 0.4),
+            0 0 40px rgba(120, 40, 255, 0.2),
+            inset 0 0 15px rgba(255, 255, 255, 0.02);
+          backdrop-filter: blur(18px);
+        }
+
+        .accent {
+          color: #b173ff;
+        }
+
+        .badge-soft {
+          background: rgba(150, 70, 255, 0.25);
+          color: #e4d7ff;
+          border-radius: 999px;
+          padding: 0.15rem 0.6rem;
+          font-size: 0.75rem;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold accent" href="/">{{ myapp }}</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMain" aria-controls="navbarMain"
+                aria-expanded="false" aria-label="Переключить навигацию">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="/users">Пользователи</a></li>
+                <li class="nav-item"><a class="nav-link" href="/currencies">Валюты</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/author">Об авторе</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow-1 py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="glass-card p-4 p-md-5">
+                    <div class="badge-soft mb-3">
+                        Об авторе проекта
+                    </div>
+
+                    <h1 class="h3 mb-3">
+                        {{ author_name }}
+                    </h1>
+
+                    <p class="mb-2">
+                        <strong>Учебная группа:</strong> {{ group }}
+                    </p>
+
+                    <p class="mb-3" style="color:#e6d9ff;">
+                        Это учебный проект по дисциплине "Программирование на Python" Ломаченко Яна (505115).
+                        Цель приложения — продемонстрировать работу с HTTP-сервером, архитектурой MVC,
+                        шаблонизатором Jinja2 и интеграцией с внешним API
+                        (курсы валют ЦБ РФ).
+                    </p>
+
+                    <p class="mb-3">
+                        В рамках проекта реализованы:
+                    </p>
+                    <ul>
+                        <li>модели предметной области (Author, App, User, Currency, UserCurrency);</li>
+                        <li>получение курсов валют через API ЦБ РФ;</li>
+                        <li>логирование запросов к API;</li>
+                        <li>рендеринг HTML-страниц через Jinja2;</li>
+                        <li>маршрутизация запросов на основе HTTPServer.</li>
+                    </ul>
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>
