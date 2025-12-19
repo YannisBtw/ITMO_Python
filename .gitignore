@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 *.log
+/lab_9/currency.db
+/lab_9/currency.db-journal
+/lab_11/db.sqlite3
