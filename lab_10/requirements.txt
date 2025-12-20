@@ -1,0 +1,6 @@
+cython>=0.29
+setuptools
+wheel
+pytest
+pandas
+tabulate
